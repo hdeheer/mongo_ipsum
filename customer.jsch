@@ -1,0 +1,58 @@
+{
+  "$schema": "http:\/\/json-schema.org\/draft-03\/schema",
+
+  "type": "object",
+  "properties": {
+    "fname": {
+      "type": "string",
+      "ipsum": "fname"
+    },
+
+    "lname": {
+      "type": "string",
+	  "ipsum": "fname"	
+    },
+	
+    "email": {
+      "type": "string",
+      "format" : "email"
+    },
+
+    "phone": {
+      "required": false,
+      "pctRandomNull": 10,
+      "type": "string",
+      "format": "phone"
+    },
+
+    "gender": {
+      "type": "string",
+      "enum": [ "M", "F"]
+    },
+
+    "address": {
+      "type": "object",
+      "properties": {
+        "province": {
+          "type": "string",
+          "enum": [ "Drenthe","Flevoland","Friesland","Gelderland","Groningen","Limburg","Noord-Brabant","Noord-Holland","Overijssel","Utrecht","Zeeland","Zuid-Holland" ]
+        }
+      }
+    },
+    
+    "level": {
+      "type": "string",
+      "enum": [ "bronze", "silver", "gold" ]
+    },
+
+    "last_login": {
+      "type": "string",
+      "format": "date-time"      	
+    },
+
+    "status": {
+      "type": "string",
+      "enum": [ "ACTIVE", "INACTIVE"]
+    }
+  }
+}
