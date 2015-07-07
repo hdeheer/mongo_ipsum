@@ -10,9 +10,9 @@
 
     "lname": {
       "type": "string",
-	  "ipsum": "fname"	
+      "ipsum": "fname"	
     },
-	
+
     "email": {
       "type": "string",
       "format" : "email"
@@ -39,7 +39,7 @@
         }
       }
     },
-    
+
     "level": {
       "type": "string",
       "enum": [ "bronze", "silver", "gold" ]
@@ -47,12 +47,13 @@
 
     "last_login": {
       "type": "string",
-      "format": "date-time"      	
+      "format": "date-time",
+      "minimum": "2014-01-01"
     },
 
     "status": {
       "type": "string",
-      "enum": [ "ACTIVE", "INACTIVE"]
+      "enum": [ "ACTIVE", "ACTIVE", "INACTIVE"]
     }
   }
 }
