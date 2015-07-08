@@ -3,13 +3,9 @@
 
   "type": "object",
   "properties": {
-    "name": {
-      "type": "string"
-    },
-
-    "description": {
-      "type": "string",
-      "ipsum": "sentence"
+    "_id": {
+      "type": "integer",
+      "ipsum": { "inc": { "start": 0, "val": 1 }}
     },
 
     "price": {
@@ -18,10 +14,18 @@
       "digits": 2
     },
 
-    "color": {
-      "type": "string",
-      "enum": [ "black", "blue", "green", "red", "white", "yellow" ],
-      "pctRandomNull": 25
+    "product_details" : {
+      "type": "object",
+      "properties": {
+        "color": {
+          "type": "string",
+          "enum": [ "black", "blue", "green", "red", "white", "yellow", "gray" ]
+        },
+        "name": {
+          "type": "string"
+        }
+      }
     }
+
   }
 }
